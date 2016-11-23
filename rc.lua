@@ -111,8 +111,16 @@ if beautiful.wallpaper then
 end
 -- }}}
 
+-- power menu
+mysystemmenu = {
+   { "shutdown", awful.util.getdir("config") .. "/scripts/shutdown.sh" },
+   { "reboot", awful.util.getdir("config") .. "/scripts/reboot.sh" },
+   { "suspend", awful.util.getdir("config") .. "/scripts/suspend.sh" },
+   { "hibernate", awful.util.getdir("config") .. "/scripts/hibernate.sh" }
+}
+
 -- {{{ Freedesktop Menu
-mymainmenu = awful.menu.new({ items = require("menugen").build_menu(),
+mymainmenu = awful.menu.new({ items = {{"Main menu",require("menugen").build_menu()},{ "system", mysystemmenu }},
                               theme = { height = 16, width = 130 }})
 -- }}}
 
