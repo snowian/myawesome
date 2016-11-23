@@ -120,7 +120,8 @@ mysystemmenu = {
 }
 
 -- {{{ Freedesktop Menu
-mymainmenu = awful.menu.new({ items = {{"Main menu",require("menugen").build_menu()},{ "system", mysystemmenu }},
+-- mymainmenu = awful.menu.new({ items = {{"Main menu",require("menugen").build_menu()},{ "system", mysystemmenu }},
+mymainmenu = awful.menu.new({ items = require("menugen").build_menu(),{ "Power Menu", mysystemmenu },
                               theme = { height = 16, width = 130 }})
 -- }}}
 
