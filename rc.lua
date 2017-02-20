@@ -59,7 +59,7 @@ run_once({ "urxvtd", "unclutter -root", "numlockx", "dex -a -e Awesome" })
 -- }}}
 
 -- {{{ Variable definitions
-local chosen_theme = "powerarrow-darker"
+local chosen_theme = "multicolor"
 local modkey       = "Mod4"
 local altkey       = "Mod1"
 -- local terminal     = "urxvtc" or "xterm"
